@@ -19,9 +19,15 @@
   },
   "homepage": "https://github.com/jquintanas/autonomaDAW#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.6.2",
     "express": "^4.17.1",
     "express-admin": "^1.4.2",
+    "express-session": "^1.16.2",
     "mysql2": "^1.6.5",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "sequelize": "^5.10.1"
   },
