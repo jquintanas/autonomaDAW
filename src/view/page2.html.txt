@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Umbrella Corporation</title>
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"> <!-- Google web font "Open Sans" -->
+  <link rel="stylesheet" href="../resources/font-awesome-4.7.0/css/font-awesome.min.css"> <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" media="screen"> <!-- Bootstrap style -->
+
+  <style>
+    body {
+      background-image: url("imagen5.jpg");
+
+    }
+
+  </style>
+</head>
+
+<body style="">
+  <div class="">
+
+    <div class="" align="center" style="margin:50px">
+      <div class="" style="color:black; font-size:50px; font-family: fantasy">
+        <h1 class="s3">TERROR!</h1>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-md-12">
+          <img src="https://d2foa7ei5ukpvz.cloudfront.net/wp-content/uploads/2018/11/05105910/it-9781501175466_hr1.jpg" alt="" width="50%">
+        </div>
+      </div>
+      <br>
+      <p>Varios niños de una pequeña ciudad del estado de Maine se alían para combatir a una entidad diabólica que adopta la forma de un payaso y desde hace mucho tiempo emerge cada 27 años para saciarse de sangre infantil.</p>
+    </div> <!-- .main-content -->
+
+    <!-- load JS files -->
+
+
+  </div>
+</body>
+
+</html>
