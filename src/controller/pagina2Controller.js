@@ -1,6 +1,6 @@
 const controller = {};
 controller.index = (req,res) => {
-  res.send("holaaaaa2");
+  res.render("page2");
 }
 
 module.exports = controller;

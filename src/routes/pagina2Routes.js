@@ -1,10 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controller/pagina1Controller');
+const controller = require('../controller/pagina2Controller');
 const passport = require('passport');
-const { isNoLoggedIn } = require('../config/auth');
-const { isLoggedIn } = require('../config/auth');
 
-
-router.get('/', isNoLoggedIn, controller.index);
+router.get('/', controller.index);
 module.exports = router;

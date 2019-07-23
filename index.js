@@ -13,18 +13,25 @@ const app = express();
 const pagina1 = require("./src/routes/pagina1Routes");
 const pagina2 = require("./src/routes/pagina2Routes");
 const login = require("./src/routes/loginRoutes");
+const nf404 = require("./src/routes/404Router");
+const admin = require("./src/routes/adminRouter");
 //settings
 app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/view'));
 
 //middleware --> se ejecuta antes de las peticiones de usuarios
-app.use(session({
-  secret: 'sis_tb_flotillas',
-  resave: false,
-  saveUninitialized: false,
-  cookie: { secure: true }
-}));
+var sess = {
+  secret: 'keyboard cat',
+  cookie: {}
+}
+
+if (app.get('env') === 'production') {
+  app.set('trust proxy', 1) // trust first proxy
+  sess.cookie.secure = true // serve secure cookies
+}
+
+app.use(session(sess))
 app.use(express.urlencoded({extended: false}));
 app.use(morgan('dev'));
 app.use(bodyparser.json());
@@ -39,6 +46,8 @@ app.use(express.static(path.join(__dirname, '/src/public')));
 app.use("/",pagina1);
 app.use("/p2",pagina2);
 app.use("/login",login);
+app.use("/admin",admin);
+app.use("/**",nf404);
 
 const server = app.listen(app.get('port'), () => {
   console.log('Server on port', app.get('port'));

@@ -8,7 +8,7 @@ router.get('/', isNoLoggedIn, loginController.login);
 
 router.post('/signin', (req, res, next) => {
   passport.authenticate('local.signin', {
-    successRedirect: '/',
+    successRedirect: '/admin',
     failureRedirect: '/login',
     failureFlash: true
   })(req, res, next);
