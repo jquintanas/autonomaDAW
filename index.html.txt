@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>404 Page</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:700,900" rel="stylesheet">
+		<style>
+			body {
+				background-color: white;
+			}
+		</style>
+
+</head>
+
+<body>
+
+	<div id="notfound">
+		<div class="" style="text-align:center">
+			<img src="ops.png" alt="">
+		</div>
+		<div class="notfound">
+			<div class="notfound-404" style="text-align:center ; ">
+				<h1 class="text-center" style="color:black; font-family: 'Montserrat', sans-serif; font-size:75px">404</h1>
+				<h2 class="text-center" style="color:black; font-size:50px">Page not found</h2>
+			</div>
+
+			<div class="" style="text-align: center; ">
+				<a href="#" style="color: black; font-size:20px">Principal</a>
+			</div>
+
+		</div>
+	</div>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
