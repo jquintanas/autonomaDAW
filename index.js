@@ -5,6 +5,7 @@ const flash = require('connect-flash');
 const passport = require('passport');
 const bodyparser = require('body-parser');
 const session = require('express-session');
+const Sequelize = require('sequelize')
 require('./src/config/passport');
 //variables del servidor
 const app = express();
@@ -19,6 +20,30 @@ const admin = require("./src/routes/adminRouter");
 app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/view'));
+
+//conexion bd
+const sequelize = new Sequelize('trabajoautonomo2', 'autonomo', 'autonomo', {
+  host: 'localhost',
+  dialect: 'mysql',
+})
+sequelize.authenticate()
+  .then(async () => {
+    await console.log('Conectado')
+  })
+  .catch(err => {
+    console.log('No se conecto')
+  })
+
+  const Personas = sequelize.define('persona',{
+  nombre: Sequelize.STRING(50),
+  apellidos: Sequelize.STRING(50),
+  edad: Sequelize.INTEGER,
+  fecha_nacimiento: Sequelize.DATEONLY
+});
+
+async function selectTotal() {
+  let personas = await Personas.findAll().then((datos) => {console.log(datos)});
+}
 
 //middleware --> se ejecuta antes de las peticiones de usuarios
 var sess = {
@@ -51,4 +76,5 @@ app.use("/**",nf404);
 
 const server = app.listen(app.get('port'), () => {
   console.log('Server on port', app.get('port'));
+  selectTotal();
 });

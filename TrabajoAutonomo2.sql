@@ -1,5 +1,8 @@
 create database trabajoautonomo2;
 use trabajoautonomo2;
+CREATE USER 'autonomo'@'localhost' identified by 'autonomo';
+GRANT ALL PRIVILEGES ON trabajoautonomo2.* TO autonomo@localhost;
+FLUSH PRIVILEGES;
 
 create table persona(
 	nombre varchar(50),
